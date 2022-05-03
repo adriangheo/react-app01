@@ -14,6 +14,7 @@ class App extends React.Component{
       <div className="App">
         <h1>Lista Utilizatori:</h1>
           < UserItem/>
+          < UserItem/>
       </div>
     );
   }
