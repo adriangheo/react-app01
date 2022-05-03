@@ -1,5 +1,7 @@
-import React from 'react'
+import React from 'react';
 import './App.css';
+import UserItem from './components/UserItem';
+
 
 class App extends React.Component{
   constructor(){
@@ -10,7 +12,8 @@ class App extends React.Component{
   render(){
     return (
       <div className="App">
-        CURS 02
+        <h1>Lista Utilizatori:</h1>
+          < UserItem/>
       </div>
     );
   }
