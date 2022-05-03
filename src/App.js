@@ -13,8 +13,17 @@ class App extends React.Component{
     return (
       <div className="App">
         <h1>Lista Utilizatori:</h1>
-          < UserItem/>
-          < UserItem/>
+          < UserItem 
+            name="Mohamed Salah" 
+            email="salah.mohamed@gmail.com"
+          />
+          < UserItem 
+            name="Roberto Firimino" 
+            email="roberto.firimino@gmail.com"
+          />
+
+          <input type="submit" value="Apasa-ma!"/>
+          <input type="submit" value="Nu ma apasa"/>
       </div>
     );
   }

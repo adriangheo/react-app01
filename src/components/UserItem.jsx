@@ -1,10 +1,13 @@
 import React from "react";
 
-function UserItem(){
+function UserItem(props){
+
+    const { name, email } = props
+
     return (
         <div>
-            <p>Salah Mohamed</p>
-            <p>salah.mohamed@gmail.com</p>
+            <p>{ name }</p>
+            <p>{ email }</p>
         </div>
     );
 }
