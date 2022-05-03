@@ -1,6 +1,6 @@
 import React from "react";
 
-function UserItem(){
+export function UserItem(){
     return (
         <div>
             <p>Salah Mohamed</p>
@@ -9,5 +9,3 @@ function UserItem(){
     );
 }
 
-
-export default UserItem;

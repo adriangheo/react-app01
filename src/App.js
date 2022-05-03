@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import UserItem from './components/UserItem';
+import { UserItem } from './components/UserItem';
 
 
 class App extends React.Component{
