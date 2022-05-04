@@ -1,12 +1,12 @@
 import React from 'react';
 import UserItem from './components/UserItem';
-
+import './App.css'
 
 class App extends React.Component{
   constructor(){
     super();
     this.state = {
-      background: 'purple'
+      background: 'pink'
     }
   }
 
