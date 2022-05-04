@@ -14,7 +14,7 @@ class App extends React.Component{
     console.log(this.state)
 
     return (
-      <div className="App">
+      <div className="App" style={{background: this.state.background}}>
         <h1>Lista Utilizatori:</h1>
           <UserItem 
             name="Mohamed Salah" 
