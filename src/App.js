@@ -29,6 +29,8 @@ class App extends React.Component{
             name="Sadio Mane" 
             email="sadio.mane@gmail.com"
           />
+
+          <input type="color"/>
       </div>
     );
   }
