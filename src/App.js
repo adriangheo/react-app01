@@ -6,10 +6,14 @@ import UserItem from './components/UserItem';
 class App extends React.Component{
   constructor(){
     super();
-    this.state = {}
+    this.state = {
+      background: 'purple'
+    }
   }
 
   render(){
+    console.log(this.state)
+
     return (
       <div className="App">
         <h1>Lista Utilizatori:</h1>
