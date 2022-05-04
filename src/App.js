@@ -13,13 +13,17 @@ class App extends React.Component{
     return (
       <div className="App">
         <h1>Lista Utilizatori:</h1>
-          < UserItem 
+          <UserItem 
             name="Mohamed Salah" 
             email="salah.mohamed@gmail.com"
           />
-          < UserItem 
+          <UserItem 
             name="Roberto Firimino" 
             email="roberto.firimino@gmail.com"
+          />
+          <UserItem 
+            name="Sadio Mane" 
+            email="sadio.mane@gmail.com"
           />
       </div>
     );
