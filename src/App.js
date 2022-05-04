@@ -11,7 +11,10 @@ class App extends React.Component{
   }
 
   handleBackgroundChange(event){
-      console.log(event);
+      console.log(event.target.value);
+      const userBackground = event.target.value;
+      
+      this.state.background = userBackground;
   }
 
   render(){
