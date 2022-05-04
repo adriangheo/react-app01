@@ -35,7 +35,7 @@ class App extends React.Component{
             email="sadio.mane@gmail.com"
           />
 
-          <input type="color" onChange={ this.handleBackgroundChange }/>
+          <input type="color" onChange={ (event) => this.handleBackgroundChange(event) }/>
       </div>
     );
   }
