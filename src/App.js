@@ -10,9 +10,11 @@ class App extends React.Component{
     }
   }
 
-  render(){
-    console.log(this.state)
+  handleBackgroundChange(event){
+      console.log(event);
+  }
 
+  render(){
     return (
       <div className="App" style={{background: this.state.background}}>
         <h1>Lista Utilizatori:</h1>
@@ -29,12 +31,10 @@ class App extends React.Component{
             email="sadio.mane@gmail.com"
           />
 
-          <input type="color"/>
+          <input type="color" onChange={ this.handleBackgroundChange }/>
       </div>
     );
   }
-
-
 }
 
 export default App;
