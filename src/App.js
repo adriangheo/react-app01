@@ -21,9 +21,6 @@ class App extends React.Component{
             name="Roberto Firimino" 
             email="roberto.firimino@gmail.com"
           />
-
-          <input type="submit" value="Apasa-ma!"/>
-          <input type="submit" value="Nu ma apasa"/>
       </div>
     );
   }
