@@ -6,11 +6,12 @@ function UserList(props){
     return(
         <div>
             {
-                users.map((user) => {
+                users.map((user, index) => {
                     return <UserItem 
                         name = {user.name}
                         email = {user.email}
                         isGoldClient = {user.isGoldClient}
+                        key = {index}
                     />
                 }) 
             }   
