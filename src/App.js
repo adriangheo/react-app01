@@ -36,7 +36,8 @@ class App extends React.Component{
         <h1>Lista Utilizatori:</h1>
         <UserItem 
           name={this.state.users[0].name} 
-          email={this.state.users[0].email} 
+          email={this.state.users[0].email
+          } 
           isGoldClient={this.state.users[0].isGoldClient} 
         />
         <UserItem 
