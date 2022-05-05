@@ -1,10 +1,18 @@
 import React from 'react';
 
 function UserList(props){
-    console.log(props)
+    const {users} = props;
     return(
         <div>
-            LIST 
+            {
+                users.map((user) => {
+                    return <div>
+                        {
+                            user.name
+                        }
+                    </div>
+                }) 
+            }   
         </div>
     );
 }
