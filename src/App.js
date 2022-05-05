@@ -5,7 +5,12 @@ import UserList from './components/UserList';
 
 class App extends React.Component{
   constructor(){
+    console.log("constructor has been called");
+
     super();
+    var index = 0;
+    index++;
+    console.log(index)
     this.state = {
       background: 'white',
       users: [
@@ -23,6 +28,10 @@ class App extends React.Component{
     }
   }
 
+  componentDidMount(){
+    console.log("app .js was mounted");
+  }
+
   handleBackgroundChange(event){
       console.log(event.target.value);
       const userBackground = event.target.value;
@@ -32,6 +41,9 @@ class App extends React.Component{
   }
 
   render(){
+
+    console.log("constructor has been called");
+
     return (
       <div className="App" style={{background: this.state.background}}>
         <h1>Lista Utilizatori:</h1>
