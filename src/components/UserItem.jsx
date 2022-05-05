@@ -2,7 +2,8 @@ import React from "react";
 
 function UserItem(props){
 
-    const { name, email } = props
+    const { name, email, isGoldClient } = props;
+    console.log(isGoldClient);
 
     return (
         <div>
