@@ -1,4 +1,5 @@
 import React from 'react';
+import UserItem from './UserItem';
 
 function UserList(props){
     const {users} = props;
@@ -6,15 +7,11 @@ function UserList(props){
         <div>
             {
                 users.map((user) => {
-                    return <div>
-                        <h2>{user.name}</h2>
-                        <p>{user.email}</p>
-                        {
-                            user.isGoldClient
-                                ? <p>CLIENT GOLD</p>
-                                : null 
-                        }
-                    </div>
+                    return <UserItem 
+                        name = {user.name}
+                        email = {user.email}
+                        isGoldClient = {user.isGoldClient}
+                    />
                 }) 
             }   
         </div>
