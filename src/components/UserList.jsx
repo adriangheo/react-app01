@@ -7,8 +7,12 @@ function UserList(props){
             {
                 users.map((user) => {
                     return <div>
+                        <h2>{user.name}</h2>
+                        <p>{user.email}</p>
                         {
-                            user.name
+                            user.isGoldClient
+                                ? <p>CLIENT GOLD</p>
+                                : null 
                         }
                     </div>
                 }) 
