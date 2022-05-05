@@ -5,12 +5,8 @@ import UserList from './components/UserList';
 
 class App extends React.Component{
   constructor(){
-    console.log("constructor has been called");
-
+    console.log("App constructor has been called");
     super();
-    var index = 0;
-    index++;
-    console.log(index)
     this.state = {
       background: 'white',
       users: [
@@ -42,7 +38,7 @@ class App extends React.Component{
 
   render(){
 
-    console.log("constructor has been called");
+    console.log("App render has been called");
 
     return (
       <div className="App" style={{background: this.state.background}}>

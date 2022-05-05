@@ -4,11 +4,17 @@ import UserItem from './UserItem';
 //changed function into class
 class UserList extends React.Component{
     constructor(props){
+        console.log('UserList constructor has been called');
         super(props);
         this.state = {}
     }
 
+    componentDidMount(){
+        console.log('UserList has been mounted');
+    }
+
     render(){
+        console.log('UserList render has been called');
         return(
             <div>
                 {
