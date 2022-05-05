@@ -5,7 +5,7 @@ function UserItem(props){
 
     return (
         <div>
-            <p>{ name }</p>
+            <h2>{ name }</h2>
             <p>{ email }</p>
             {
                 isGoldClient 
