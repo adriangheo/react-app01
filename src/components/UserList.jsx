@@ -1,8 +1,8 @@
 import React from 'react';
 import UserItem from './UserItem';
 
+//changed function into class
 class UserList extends React.Component{
-    // const {users} = props;
     constructor(props){
         super(props);
         this.state = {}
