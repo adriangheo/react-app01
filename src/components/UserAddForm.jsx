@@ -17,6 +17,11 @@ class UserAddForm extends React.Component{
         this.setState({name: inputValue})
     }
 
+    handleEmailChange(event){
+        const inputValue = event.target.value;
+        this.setState({email: inputValue})
+    }
+
     render(){
         return(
             <form>
@@ -26,7 +31,7 @@ class UserAddForm extends React.Component{
                 <input type="text" name="name" value={this.state.name} onChange={(event)=>{this.handleNameChange(event)}}/>
 
                 <label htmlFor="email">Email:</label>
-                <input type="text" name="email" value={this.state.email}/>
+                <input type="text" name="email" value={this.state.email} onChange={(event)=>{this.handleEmailChange(event)}}/>
 
                 <label htmlFor="gold-client">Is client gold?</label>
                 <input type="checkbox" name="gold-client" value={this.state.isGoldClient}/>
