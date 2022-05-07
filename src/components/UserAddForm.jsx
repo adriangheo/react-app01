@@ -1,4 +1,5 @@
 import React from "react";
+import './UserAddForm.css'
 
 
 class UserAddForm extends React.Component{
@@ -30,7 +31,7 @@ class UserAddForm extends React.Component{
 
     render(){
         return(
-            <form>
+            <form className="user-add-form">
                 <h2>Adauga un utilizator nou:</h2>
 
                 <label htmlFor="name">Nume:</label>
