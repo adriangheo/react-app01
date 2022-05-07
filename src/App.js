@@ -19,8 +19,18 @@ class App extends React.Component{
         return response. json();
       })
       .then((json) => {
-        console.log(json);
-        this.setState({users: json})
+        //filter the date which comes from the API
+        //so that only 3 users will be displayed
+        const arrayV2 = json.filter((elem, index) => index < 3)
+
+        //add a property to each user
+        //with the value true
+        arrayV2.forEach(user => {
+          user.isGoldClient = true
+        });
+
+        console.log(arrayV2);
+        this.setState({users: arrayV2})
       })
   }
 
