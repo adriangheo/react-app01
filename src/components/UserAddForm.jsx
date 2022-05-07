@@ -5,8 +5,14 @@ class UserAddForm extends React.Component{
     constructor(){
         super();
         this.state = {
-
+            name: '',
+            email: '',
+            isGoldClient: false
         }
+    }
+
+    handleNameChange(event){
+        console.log(event);
     }
 
     render(){
@@ -15,13 +21,13 @@ class UserAddForm extends React.Component{
                 <h2>Adauga un utilizator nou:</h2>
 
                 <label htmlFor="name">Nume:</label>
-                <input type="text" name="name"/>
+                <input type="text" name="name" value={this.state.name} onChange={this.handleNameChange}/>
 
                 <label htmlFor="email">Email:</label>
-                <input type="text" name="email"/>
+                <input type="text" name="email" value={this.state.email}/>
 
                 <label htmlFor="gold-client">Is client gold?</label>
-                <input type="checkbox" name="gold-client"/>
+                <input type="checkbox" name="gold-client" value={this.state.isGoldClient}/>
 
                 <input type="submit" value="Submit form!"/>
             </form>
