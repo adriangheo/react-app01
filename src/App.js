@@ -18,8 +18,9 @@ class App extends React.Component{
       .then((response) => {
         return response. json();
       })
-      .then((users) => {
-        console. log(users);
+      .then((json) => {
+        console.log(json);
+        this.setState({users: json})
       })
   }
 
