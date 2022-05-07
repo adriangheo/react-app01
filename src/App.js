@@ -9,18 +9,7 @@ class App extends React.Component{
     super();
     this.state = {
       background: 'white',
-      users: [
-        {
-          name: "Arsene Florin",
-          email: "arsene.florin@gmail.com",
-          isGoldClient: true
-        },
-        {
-          name: "Criste Mihai",
-          email: "criste.mihai@gmail.com",
-          isGoldClient: false
-        }
-      ]
+      users: []
     }
   }
 
