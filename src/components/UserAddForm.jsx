@@ -12,7 +12,7 @@ class UserAddForm extends React.Component{
     }
 
     handleNameChange(event){
-        console.log(event);
+        console.log(event.target.value);
     }
 
     render(){
