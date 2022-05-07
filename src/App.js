@@ -25,7 +25,17 @@ class App extends React.Component{
   }
 
   componentDidMount(){
-    console.log("app .js was mounted");
+    fetch( "https: //jsonplaceholder.typicode.com/users")
+      .then((response) => {
+        return response. json();
+      })
+      .then((users) => {
+        console. log(users);
+      })
+  }
+
+  componentDidUpdate(){
+    console.log("app .js was updated");
   }
 
   handleBackgroundChange(event){
