@@ -23,7 +23,7 @@ class UserAddForm extends React.Component{
                 <h2>Adauga un utilizator nou:</h2>
 
                 <label htmlFor="name">Nume:</label>
-                <input type="text" name="name" value={this.state.name} onChange={this.handleNameChange}/>
+                <input type="text" name="name" value={this.state.name} onChange={(event)=>{this.handleNameChange(event)}}/>
 
                 <label htmlFor="email">Email:</label>
                 <input type="text" name="email" value={this.state.email}/>
