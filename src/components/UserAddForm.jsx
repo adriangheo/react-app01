@@ -22,6 +22,12 @@ class UserAddForm extends React.Component{
         this.setState({email: inputValue})
     }
 
+    handleIsGoldChange(event){
+        console.log(event.target.checked)
+        const inputValue = event.target.checked;
+        this.setState({isGoldClient: inputValue})
+    }
+
     render(){
         return(
             <form>
@@ -47,7 +53,8 @@ class UserAddForm extends React.Component{
                 <input 
                     type="checkbox" 
                     name="gold-client" 
-                    value={this.state.isGoldClient}
+                    checked = {this.isGoldChange}
+                    onChange={(event)=>{this.handleIsGoldChange(event)}}
                 />
 
                 <input type="submit" value="Submit form!"/>
