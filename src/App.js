@@ -60,6 +60,7 @@ class App extends React.Component{
 
   render(){
     // console.log("App render has been called");
+    console.log(this.state.background);
     return (
       <div className="App" style={{background: this.state.background}}>
         <h1>Lista Utilizatori:</h1>
