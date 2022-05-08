@@ -6,7 +6,7 @@ import UserAddForm from './components/UserAddForm';
 
 class App extends React.Component{
   constructor(){
-    console.log("App constructor has been called");
+    // console.log("App constructor has been called");
     super();
     this.state = {
       background: 'white',
@@ -30,13 +30,13 @@ class App extends React.Component{
           user.isGoldClient = true
         });
 
-        console.log(arrayV2);
+        // console.log(arrayV2);
         this.setState({users: arrayV2})
       })
   }
 
   componentDidUpdate(){
-    console.log("app .js was updated");
+    // console.log("app .js was updated");
   }
 
   handleBackgroundChange(event){
@@ -45,6 +45,9 @@ class App extends React.Component{
       
       // this.state.background = userBackground;
       this.setState({background: userBackground});
+      //The line bellow (i.e. the loging of the background color)
+      //demonstrates that the setState() call happens asynchronously
+      console.log(event.target.value);  
   }
 
   updateUsersList(user){
@@ -56,8 +59,7 @@ class App extends React.Component{
 
 
   render(){
-    console.log("App render has been called");
-
+    // console.log("App render has been called");
     return (
       <div className="App" style={{background: this.state.background}}>
         <h1>Lista Utilizatori:</h1>
