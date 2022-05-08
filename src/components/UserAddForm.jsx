@@ -3,8 +3,8 @@ import './UserAddForm.css'
 
 
 class UserAddForm extends React.Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             name: '',
             email: '',
@@ -29,9 +29,26 @@ class UserAddForm extends React.Component{
         this.setState({isGoldClient: inputValue})
     }
 
+    handleFormSubmit(event){
+        event.preventDefault();
+
+        const newUser = {
+            name: this.state.name,
+            email: this.state.email,
+            isGoldClient: this.state.isGoldClient,
+        }
+        // this.setState({users:[newUser]})
+        this.props.updateUsersList(newUser);
+    }
+
+
+
     render(){
         return(
-            <form className="user-add-form">
+            <form 
+                className="user-add-form"
+                onSubmit={(event)=>{this.handleFormSubmit(event)}}
+            >
                 <h2>Adauga un utilizator nou:</h2>
 
                 <label htmlFor="name">Nume:</label>

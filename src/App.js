@@ -47,14 +47,21 @@ class App extends React.Component{
       this.setState({background: userBackground});
   }
 
-  render(){
+  updateUsersList(user){
+    // TODO: Do not ignore the other users
+    // Note: for now, with whis function we are only 
+    // dispaying user entered with the userAddForm
+    this.setState({users: [user]})
+  }
 
+
+  render(){
     console.log("App render has been called");
 
     return (
       <div className="App" style={{background: this.state.background}}>
         <h1>Lista Utilizatori:</h1>
-        <UserAddForm/>
+        <UserAddForm updateUsersList={(user) => {this.updateUsersList(user)}}/>
         <UserList users={this.state.users}/>
         <input type="color" onChange={ (event) => this.handleBackgroundChange(event) }/>
       </div>
