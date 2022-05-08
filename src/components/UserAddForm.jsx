@@ -38,7 +38,7 @@ class UserAddForm extends React.Component{
             isGoldClient: this.state.isGoldClient,
         }
         // this.setState({users:[newUser]})
-        this.props.updateUsersList(newUser);
+        this.props.updateUsersListProp(newUser);
     }
 
 

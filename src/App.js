@@ -61,7 +61,7 @@ class App extends React.Component{
     return (
       <div className="App" style={{background: this.state.background}}>
         <h1>Lista Utilizatori:</h1>
-        <UserAddForm updateUsersList={(user) => {this.updateUsersList(user)}}/>
+        <UserAddForm updateUsersListProp={(user) => {this.updateUsersList(user)}}/>
         <UserList users={this.state.users}/>
         <input type="color" onChange={ (event) => this.handleBackgroundChange(event) }/>
       </div>
