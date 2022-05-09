@@ -51,10 +51,15 @@ class App extends React.Component{
   }
 
   updateUsersList(user){
-    // TODO: Do not ignore the other users
-    // Note: for now, with whis function we are only 
-    // dispaying user entered with the userAddForm
-    this.setState({users: [user]})
+    this.setState({users: [
+      // TODO: chage this poor implemenetation of adding a new user 
+      //to already existing users, so that the parameters of setState()
+      //does not contain this.state (this being a dangerous implementation)
+      //this is linked to the asychronous nature setState(), and also 
+      //to the copying of multiple objects
+      ...this.state.users, 
+      user
+    ]});
   }
 
 
