@@ -51,15 +51,21 @@ class App extends React.Component{
   }
 
   updateUsersList(user){
-    this.setState({users: [
-      // TODO: chage this poor implemenetation of adding a new user 
-      //to already existing users, so that the parameters of setState()
-      //does not contain this.state (this being a dangerous implementation)
-      //this is linked to the asychronous nature setState(), and also 
-      //to the copying of multiple objects
-      ...this.state.users, 
-      user
-    ]});
+    // //POTENTIALY DANGEROUS IMPLEMENTATION:
+    // this.setState({users: [
+    //   ...this.state.users, 
+    //   user
+    // ]});
+
+    // PROPER IMPLEMENTATION:
+    //setState() receives a function as a parameter, and afterwards this second function
+    //receives itself the preceding state value, as parameter
+    this.setState((previousState)=>{
+      return {users: [
+        ...previousState.users, 
+        user
+      ]}
+    });
   }
 
 
